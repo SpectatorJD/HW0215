@@ -5,6 +5,7 @@ public class Main {
         task3();
         task4();
         task5();
+        task6();
     }
 
     public static void task1 () {
@@ -68,17 +69,17 @@ public class Main {
 
         byte first = 20;
         short second = (short) (oneMin * first);
-        //System.out.println("Произовдительность за двадцать минут " +  second + " бутылок");
+        System.out.println("За 20 минут машина произвела  " +  second + " штук бутылок");
 
         short third = 60 * 24;
         short fourth = (short) (oneMin * third);
-        //System.out.println("в стуки " + fourth + " бутылок");
+        System.out.println("За сутки машина произвела  " + fourth + " штук бутылок");
 
         int fifth = fourth * 3;
-        //System.out.println("за трое суток " + fifth +  " бутылок");
+        System.out.println("За трое суток машина произвела  " + fifth +  " штук бутылок");
 
         int sixth = fifth * 10;
-        System.out.println("За месяц " + sixth + " штук бутылок");
+        System.out.println("За месяц машина произвела " + sixth + " штук бутылок");
 
 
 
@@ -102,6 +103,29 @@ public class Main {
         byte allBrownJac = (byte) (brownJac * allClass);
         System.out.println("В школе, где " + allClass + " классов, нужно "
                 + allWhiteJac + " банок белой краски и " + allBrownJac + " банок коричневой краски");
+
+    }
+
+    public static void task6 () {
+        System.out.println("Задача 6");
+        byte bananas = 5;
+        byte weightOneBananas = 80;
+        int allWeightBananas = bananas * weightOneBananas;
+        short milk = 200;
+        short weightOneMilk = 210;
+        byte iceCream = 2;
+        byte weightOneIceCream = 100;
+        int allWeightIceCream = iceCream * weightOneIceCream;
+        byte eggs = 4;
+        byte weightOneEggs = 70;
+        int allWeightEggs = eggs * weightOneEggs;
+        int allWeightGrams = allWeightEggs + allWeightBananas + allWeightIceCream + weightOneMilk;
+        System.out.println(allWeightGrams + " грамм - вес спортзавтрака");
+        double allWeightKg = allWeightGrams / 1000d;
+        System.out.println("или " + allWeightKg + " кг - вес спортзавтрака");
+
+
+
 
     }
 }
