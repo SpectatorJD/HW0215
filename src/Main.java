@@ -4,6 +4,7 @@ public class Main {
         task2();
         task3();
         task4();
+        task5();
     }
 
     public static void task1 () {
@@ -87,4 +88,20 @@ public class Main {
 
     }
 
+
+    public static void task5 () {
+        System.out.println("Задача 5");
+        byte allJac = 120;
+        byte whiteJac = 2;
+        byte brownJac = 4;
+        byte oneClassJac = (byte) (whiteJac + brownJac);
+        //System.out.println(oneClassJac);
+        byte allClass = (byte) (allJac / oneClassJac);
+        //System.out.println(allClass);
+        byte allWhiteJac =(byte) (whiteJac * allClass);
+        byte allBrownJac = (byte) (brownJac * allClass);
+        System.out.println("В школе, где " + allClass + " классов, нужно "
+                + allWhiteJac + " банок белой краски и " + allBrownJac + " банок коричневой краски");
+
+    }
 }
