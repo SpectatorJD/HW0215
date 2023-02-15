@@ -3,6 +3,7 @@ public class Main {
         task1();
         task2();
         task3();
+        task4();
     }
 
     public static void task1 () {
@@ -51,6 +52,34 @@ public class Main {
         System.out.println("Всего детей " + allChild);
         short childList = (short) (allLists / allChild);
         System.out.println("На каждого ученика рассчитано " + childList + " листов бумаги");
+
+
+
+
+
+    }
+    public static void task4 () {
+        System.out.println("Задача 4");
+        byte botle = 16;
+        byte time = 2;
+        byte oneMin = (byte) (botle/time);
+       // System.out.println("Произовдительность за одну минуту " + oneMin + " бутылок");
+
+        byte first = 20;
+        short second = (short) (oneMin * first);
+        //System.out.println("Произовдительность за двадцать минут " +  second + " бутылок");
+
+        short third = 60 * 24;
+        short fourth = (short) (oneMin * third);
+        //System.out.println("в стуки " + fourth + " бутылок");
+
+        int fifth = fourth * 3;
+        //System.out.println("за трое суток " + fifth +  " бутылок");
+
+        int sixth = fifth * 10;
+        System.out.println("За месяц " + sixth + " штук бутылок");
+
+
 
 
 
