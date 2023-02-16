@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 public class Main {
     public static void main(String[] args) {
         task1();
@@ -34,7 +36,7 @@ public class Main {
     float c = 2.786f;
     short d = 569;
     short f = -159;
-    short g = 27897;
+    int g = 27897;
     byte h = 67;
         System.out.println(a);
         System.out.println(b);
@@ -136,18 +138,16 @@ public class Main {
 
     public static void task7 () {
         System.out.println("Задача 7");
-        double lost1 = 0.25d;
-        double lost2 = 0.50d;
-        byte days = 7;
-        byte howDays1 = (byte) (days / lost2);
-        System.out.println("Если спортсмен будет терять по 500 грамм в день, ему потребуется " + howDays1 + " дней");
-
-        byte howDays2 = (byte) (days / lost1);
-        System.out.println("Если спортсмен будет терять по 250 грамм в день, ему потребуется " + howDays2 + " дней");
-
-        byte average = (byte) ((howDays2 + howDays1) / 2);
-        System.out.println("В среднем спортсмену потребуется  " + average + " день, чтобы добиться результата похудения");
-
+       int allWeightLoss = 7000;
+       int minLoss = 250;
+       int maxLoss = 500;
+       double minDays = (double) allWeightLoss / minLoss;
+       double maxDays = (double) allWeightLoss / maxLoss;
+       double averageDays =  (minLoss + maxLoss) /2D;
+       double averageCount = allWeightLoss / averageDays;
+       System.out.println("Минимальное кол-во дней для похудения " + minDays);
+        System.out.println("Максимальное кол-во дней для похудения " + maxDays);
+        System.out.printf(Locale.US, "Среднее кол-во дней для похудения %.2f%n", averageCount);
 
 
     }
