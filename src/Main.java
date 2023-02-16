@@ -6,6 +6,8 @@ public class Main {
         task4();
         task5();
         task6();
+        task7();
+        task8();
     }
 
     public static void task1 () {
@@ -123,6 +125,63 @@ public class Main {
         System.out.println(allWeightGrams + " грамм - вес спортзавтрака");
         double allWeightKg = allWeightGrams / 1000d;
         System.out.println("или " + allWeightKg + " кг - вес спортзавтрака");
+
+
+
+
+    }
+
+
+
+
+    public static void task7 () {
+        System.out.println("Задача 7");
+        double lost1 = 0.25d;
+        double lost2 = 0.50d;
+        byte days = 7;
+        byte howDays1 = (byte) (days / lost2);
+        System.out.println("Если спортсмен будет терять по 500 грамм в день, ему потребуется " + howDays1 + " дней");
+
+        byte howDays2 = (byte) (days / lost1);
+        System.out.println("Если спортсмен будет терять по 250 грамм в день, ему потребуется " + howDays2 + " дней");
+
+        byte average = (byte) ((howDays2 + howDays1) / 2);
+        System.out.println("В среднем спортсмену потребуется  " + average + " день, чтобы добиться результата похудения");
+
+
+
+    }
+
+
+    public static void task8 () {
+        System.out.println("Задача 8");
+        int  masha = 67760;
+        int  denis = 83690;
+        int  kris  = 76230;
+        float percent = 0.1f;
+        int oldMashaYear = (int) (masha * 12); //зп маши в год до повышения
+        short yvMasha = (short) (masha * percent); //повышение зп маши на 10%
+        int newMasha = (int) (yvMasha + masha); //новая зп маши в месяц
+        int mashaYear = (int) (newMasha * 12); //новая зп маши в год
+        int diffMasha = (int) (mashaYear - oldMashaYear);//разница годовой зп
+
+        System.out.println("Маша теперь получает " + newMasha + " рублей в месяц. Годовой доход вырос на " + diffMasha + " рублей"); //Итог по Маше
+
+        int oldDenisYear = (int) (denis * 12); //зп Дениса в год до повешения
+        short yvDenis = (short) (denis * percent); //повышения зп Дениса на 10%
+        int newDenis = (int) (yvDenis + denis); //новая зп Дениса в месяц
+        int denisYear = (int) (newDenis * 12); //новая зп Дениса в год
+        int diffDenis = (int) (denisYear - oldDenisYear);
+        System.out.println("Денис теперь получает " + newDenis + " рублей в месяц. Годовой доход вырос на " + diffDenis + " рублей");
+
+        int oldKrisYear = (int) (kris * 12);
+        short yvKris = (short) (kris * percent);
+        int newKris = (int) (yvKris + kris);
+        int krisYear = (int) (newKris * 12);
+        int diffKris = (int) (krisYear - oldKrisYear);
+        System.out.println("Кристина теперь получает " + newKris + " рублей в месяц. Годовой доход вырос на " + diffKris + " рублей");
+
+
 
 
 
